@@ -40,10 +40,10 @@ def main():
                                 if valor == 7:
                                     print(crearFlickr())
         n = str(input("Ingrese si para salir del proceso: "))
-        if n == "SI" or "Si":
+        if n == "si" or n == "Si":
             bandera = False
         else:
-            pass
+            bandera = True
             contador = contador + 1
     print(obtenerMensaje(contador))
 
