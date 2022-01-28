@@ -10,14 +10,15 @@ def main():
     pass
     print("Proceso inicial")
     bandera = True
-    contador = 0
-    while (bandera):
+    contador = 1
+    while bandera:
         pass
         valor = int(
             input("• Ingrese 1 para crear una cuenta de Facebook\n• Ingrese 2 para crear una cuenta de Twitter\n"
                   "• Ingrese 3 para crear una cuenta de Whatsapp\n• Ingrese 4 para crear una cuenta de Telegram\n"
                   "• Ingrese 5 para crear una cuenta de Signal\n• Ingrese 6 para crear una cuenta de Instagram\n"
                   "• Ingrese 7 para crear una cuenta de Flickr\n"))
+
         if valor == 1:
             print(crearFacebook())
         else:
@@ -38,14 +39,17 @@ def main():
                             else:
                                 if valor == 7:
                                     print(crearFlickr())
-    n = str(input("Ingrese si para salir del proceso: "))
-    if n == "SI" or "Si":
-        bandera = False
-        contador = contador + 1
-        print(obtenerMensaje(contador))
+        n = str(input("Ingrese si para salir del proceso: "))
+        if n == "SI" or "Si":
+            bandera = False
+        else:
+            pass
+            contador = contador + 1
+    print(obtenerMensaje(contador))
+
 
 def crearFacebook():
-    cadena = "%s\n" % ("Creando cuenta de Facebook")
+    cadena = "%s\n" % "Creando cuenta de Facebook"
     nombre = str(input("Ingrese su nombre de usuario: "))
     edad = int(input("Ingrese su edad: "))
     ciudad = str(input("Ingrese su ciudad: "))
@@ -68,12 +72,12 @@ def crearTwitter():
     pais = str(input("Ingrese su pais: "))
     idioma = str(input("Ingrese el idioma: "))
     correo = str(input("Ingrese su correo: "))
-    cadena = str("%sNombre de usuario: %s\nNombre: %s\nApellido: %s\nEdad: %s\nCiudad: %s\nPaís: %s\nIdioma: %\n"
+    cadena = str("%sNombre de usuario: %s\nNombre: %s\nApellido: %s\nEdad: %s\nCiudad: %s\nPaís: %s\nIdioma: %s\n"
                  "Correo electrónico: %s\n\n") % (cadena, nombre, nombres, apellido, edad, ciudad, pais, idioma, correo)
     print(cadena)
 
 def crearWhatsapp():
-    cadena = "%s\n" % ("Creando cuenta de Whatsapp")
+    cadena = "%s\n" % "Creando cuenta de Whatsapp"
     nombre = str(input("Ingrese su nombre de usuario: "))
     cell = int(input("Ingrese su número de teléfono: "))
     edad = int(input("Ingrese su edad: "))
@@ -83,20 +87,21 @@ def crearWhatsapp():
              % (cadena, nombre, cell, edad, ciudad, pais)
     return cadena
 
+
 def crearTelegram():
-    cadena = "%s\n" % ("Creando cuenta de Telegram")
+    cadena = "%s\n" % "Creando cuenta de Telegram"
     nombre = str(input("Ingrese su nombre de usuario: "))
     cell = int(input("Ingrese su número de teléfono: "))
     ciudad = str(input("Ingrese su ciudad: "))
     pais = str(input("Ingrese su pais: "))
     interes = str(input("Ingrese su área de interés: "))
-    cadena = str("%sNombre de usuario: %s\nNúmero de teléfono: %d\nCiudad: %s\nPaís: %s\nÁrea de interés: %\n"
+    cadena = str("%sNombre de usuario: %s\nNúmero de teléfono: %d\nCiudad: %s\nPaís: %s\nÁrea de interés: %s\n"
                  "Correo electrónico: %s\n\n") % (cadena, nombre, cell, ciudad, pais, interes)
     print(cadena)
 
 
 def crearSignal():
-    cadena = "%s\n" % ("Creando cuenta de Signal")
+    cadena = "%s\n" % "Creando cuenta de Signal"
     nombre = str(input("Ingrese su nombre de usuario: "))
     cell = int(input("Ingrese su número de teléfono: "))
     ciudad = str(input("Ingrese su ciudad: "))
@@ -105,6 +110,7 @@ def crearSignal():
     cadena = str("%sNombre de usuario: %s\nNúmero de teléfono: %d\nCiudad: %s\nPaís: %s\nHobby principal: %s\n\n") \
              % (cadena, nombre, cell, ciudad, pais, hobby)
     return cadena
+
 
 def crearInstagram():
     cadena = "%s\n" % "Creando cuenta de Instagram"
@@ -116,22 +122,26 @@ def crearInstagram():
              % (cadena, nombre, ciudad, edad, correo)
     print(cadena)
 
+
 def crearFlickr():
-    cadena = "%s\n" % ("Creando cuenta de Flickr")
+    cadena = "%s\n" % "Creando cuenta de Flickr"
     correo = str(input("Ingrese su correo: "))
     nombre = str(input("Ingrese su nombre de usuario: "))
-    cadena = str("%sNombre de usuario: %s\nCorreo electrónico: %s\n\n") % (cadena, nombre, correo)
+    cadena = "%sNombre de usuario: %s\nCorreo electrónico: %s\n\n" % (cadena, nombre, correo)
     return cadena
+
 
 def obtenerMensaje(i):
     mensajeFinal = ["Campaña con poca afluencia", "Campaña moderada siga adelante", "Excelente campaña"]
-    if i == 1 and i <=5:
+    if 1 == i <= 5:
         return mensajeFinal[0]
     else:
-        if i >= 6 and i <= 15:
+        if 6 <= i <= 15:
             return mensajeFinal[1]
         else:
             if i >= 16:
                 return mensajeFinal[2]
+
+
 if __name__ == "__main__":
     main()
