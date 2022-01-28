@@ -53,7 +53,7 @@ def crearFacebook():
     nombre = str(input("Ingrese su nombre de usuario: "))
     edad = int(input("Ingrese su edad: "))
     ciudad = str(input("Ingrese su ciudad: "))
-    pais = str(input("Ingrese su pais: "))
+    pais = str(input("Ingrese su país: "))
     correo = str(input("Ingrese su correo: "))
     cadena = "%sNombre de usuario: %s\nEdad: %s\nCiudad: %s\nPaís: %s\nCorreo electrónico: %s\n\n" % (cadena,
                                                                                                       nombre, edad,
@@ -66,13 +66,13 @@ def crearTwitter():
     cadena = "%s\n" % "Creando cuenta de Twitter"
     nombre = str(input("Ingrese su nombre de usuario: "))
     nombres = str(input("Ingrese sus nombres: "))
-    apellido = str(input("Ingrese su apellido: "))
+    apellido = str(input("Ingrese sus apellidos: "))
     edad = int(input("Ingrese su edad: "))
     ciudad = str(input("Ingrese su ciudad: "))
     pais = str(input("Ingrese su pais: "))
     idioma = str(input("Ingrese el idioma: "))
     correo = str(input("Ingrese su correo: "))
-    cadena = str("%sNombre de usuario: %s\nNombre: %s\nApellido: %s\nEdad: %s\nCiudad: %s\nPaís: %s\nIdioma: %s\n"
+    cadena = str("%sNombre de usuario: %s\nNombres: %s\nApellidos: %s\nEdad: %s\nCiudad: %s\nPaís: %s\nIdioma: %s\n"
                  "Correo electrónico: %s\n\n") % (cadena, nombre, nombres, apellido, edad, ciudad, pais, idioma, correo)
     print(cadena)
 
@@ -95,8 +95,8 @@ def crearTelegram():
     ciudad = str(input("Ingrese su ciudad: "))
     pais = str(input("Ingrese su pais: "))
     interes = str(input("Ingrese su área de interés: "))
-    cadena = str("%sNombre de usuario: %s\nNúmero de teléfono: %d\nCiudad: %s\nPaís: %s\nÁrea de interés: %s\n"
-                 "Correo electrónico: %s\n\n") % (cadena, nombre, cell, ciudad, pais, interes)
+    cadena = str("%sNombre de usuario: %s\nNúmero de teléfono: %d\nCiudad: %s\nPaís: %s\nÁrea de interés: %s\n\n") \
+             % (cadena, nombre, cell, ciudad, pais, interes)
     print(cadena)
 
 
