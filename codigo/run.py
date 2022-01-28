@@ -47,7 +47,6 @@ def main():
             contador = contador + 1
     print(obtenerMensaje(contador))
 
-
 def crearFacebook():
     cadena = "%s\n" % "Creando cuenta de Facebook"
     nombre = str(input("Ingrese su nombre de usuario: "))
@@ -60,7 +59,6 @@ def crearFacebook():
                                                                                                       ciudad,
                                                                                                       pais, correo)
     return cadena
-
 
 def crearTwitter():
     cadena = "%s\n" % "Creando cuenta de Twitter"
@@ -87,7 +85,6 @@ def crearWhatsapp():
              % (cadena, nombre, cell, edad, ciudad, pais)
     return cadena
 
-
 def crearTelegram():
     cadena = "%s\n" % "Creando cuenta de Telegram"
     nombre = str(input("Ingrese su nombre de usuario: "))
@@ -98,7 +95,6 @@ def crearTelegram():
     cadena = str("%sNombre de usuario: %s\nNúmero de teléfono: %d\nCiudad: %s\nPaís: %s\nÁrea de interés: %s\n\n") \
              % (cadena, nombre, cell, ciudad, pais, interes)
     print(cadena)
-
 
 def crearSignal():
     cadena = "%s\n" % "Creando cuenta de Signal"
@@ -111,7 +107,6 @@ def crearSignal():
              % (cadena, nombre, cell, ciudad, pais, hobby)
     return cadena
 
-
 def crearInstagram():
     cadena = "%s\n" % "Creando cuenta de Instagram"
     nombre = str(input("Ingrese su nombre de usuario: "))
@@ -122,14 +117,12 @@ def crearInstagram():
              % (cadena, nombre, ciudad, edad, correo)
     print(cadena)
 
-
 def crearFlickr():
     cadena = "%s\n" % "Creando cuenta de Flickr"
-    correo = str(input("Ingrese su correo: "))
     nombre = str(input("Ingrese su nombre de usuario: "))
+    correo = str(input("Ingrese su correo: "))
     cadena = "%sNombre de usuario: %s\nCorreo electrónico: %s\n\n" % (cadena, nombre, correo)
     return cadena
-
 
 def obtenerMensaje(i):
     mensajeFinal = ["Campaña con poca afluencia", "Campaña moderada siga adelante", "Excelente campaña"]
