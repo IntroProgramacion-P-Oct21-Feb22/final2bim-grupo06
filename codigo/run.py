@@ -10,7 +10,7 @@ def main():
     pass
     print("Proceso inicial")
     bandera = True
-    contador = 1
+    contador = 0
     while bandera:
         pass
         valor = int(
@@ -39,12 +39,16 @@ def main():
                             else:
                                 if valor == 7:
                                     print(crearFlickr())
+        if valor == 1 or valor == 2 or valor == 3 or valor == 4 or valor == 5 or valor == 6 or valor == 7:
+            contador = contador + 1
+        else:
+            if valor < 1 or valor >= 8:
+                contador = contador
         n = str(input("Ingrese si para salir del proceso: "))
         if n == "si" or n == "Si":
             bandera = False
         else:
             bandera = True
-            contador = contador + 1
     print(obtenerMensaje(contador))
 
 def crearFacebook():
